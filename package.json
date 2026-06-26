@@ -12,6 +12,6 @@
   "devDependencies": {
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5010420260626001",
     "typescript": "^5.0.0",
-    "vite": "^6.0.0"
+    "vite": "5.2.8"
   }
 }
