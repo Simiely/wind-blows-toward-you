@@ -1,0 +1,22 @@
+{
+  "name": "世界的风吹向你",
+  "appid": "",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "description": "项目展示与资源分发小程序",
+  "uni-app": {
+    "modules": {},
+    "postinstall": {}
+  },
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": true,
+      "es6": true,
+      "postcss": true,
+      "minified": true
+    },
+    "usingComponents": true,
+    "permission": {}
+  }
+}

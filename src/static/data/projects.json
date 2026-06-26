@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-26",
+  "projects": [
+    {
+      "id": "meituan-bike-reminder",
+      "title": "扫完记得还",
+      "subtitle": "美团骑车锁车提醒",
+      "icon_url": "",
+      "category": "android",
+      "tags": ["Android", "Kotlin", "工具"],
+      "summary": "点一下图标 = 50分钟倒计时 + 美团扫一扫 自动就位",
+      "bg_color": "#FF6B35",
+      "feature_tag": "🚲 骑行必备",
+      "sections": [
+        {
+          "type": "hero",
+          "title": "扫完 记得 还。",
+          "subtitle": "最大特点",
+          "content": "点一下图标＝50 分钟倒计时 + 美团扫一扫 自动就位。"
+        },
+        {
+          "type": "highlight",
+          "content": "不看界面、不点按钮。扫码的瞬间，锁车提醒已经悄悄开始——骑行结束准点响铃。"
+        },
+        {
+          "type": "steps",
+          "title": "一次点击，两件事发生",
+          "items": [
+            {
+              "step": "01",
+              "icon": "⏱",
+              "title": "创建 50 分钟倒计时",
+              "desc": "调用系统时钟 ACTION_SET_TIMER，SKIP_UI 无弹窗确认，直接进入灵动岛/状态栏计时。"
+            },
+            {
+              "step": "02",
+              "icon": "📸",
+              "title": "打开美团扫一扫",
+              "desc": "延迟 1000ms 启动，避开 Activity 切换时相机初始化竞争，直达扫码界面。"
+            }
+          ]
+        },
+        {
+          "type": "architecture",
+          "title": "三层兜底，万无一失",
+          "systems": [
+            {
+              "name": "倒计时 · Timer",
+              "items": [
+                { "level": "首选", "desc": "ACTION_SET_TIMER · EXTRA_SKIP_UI · 系统原生，无弹窗，支持灵动岛" },
+                { "level": "次选", "desc": "AlarmManager + BroadcastReceiver · 应用层计时，到点弹通知" },
+                { "level": "兜底", "desc": "提示用户手动设置" }
+              ]
+            },
+            {
+              "name": "美团扫一扫 · Scanner",
+              "items": [
+                { "level": "首选", "desc": "imeituan:// 通用扫码页，最稳定" },
+                { "level": "次选", "desc": "imeituan:// 单车专用扫码页" },
+                { "level": "兜底", "desc": "com.sankuai.meituan · 包名启动美团" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "specs",
+          "title": "技术规格",
+          "fields": [
+            { "label": "版本", "value": "v2.7.1" },
+            { "label": "平台", "value": "Android 7.0+" },
+            { "label": "技术栈", "value": "Kotlin · AlarmManager · BroadcastReceiver" },
+            { "label": "许可", "value": "MIT 开源" }
+          ]
+        }
+      ],
+      "download_url": "https://github.com/Simiely/meituan-bike-reminder/releases",
+      "github_url": "https://github.com/Simiely/meituan-bike-reminder",
+      "screenshots": []
+    },
+    {
+      "id": "oc-plugin-activator",
+      "title": "OC插件 快速激活工具",
+      "subtitle": "OctaneRender 清理/部署工具",
+      "icon_url": "",
+      "category": "windows",
+      "tags": ["Windows", "Python", "工具"],
+      "summary": "一键清空 OctaneRender 残留 + 部署资源",
+      "bg_color": "#4A90D9",
+      "feature_tag": "🖥️ C4D 插件工具",
+      "sections": [
+        {
+          "type": "hero",
+          "title": "OC插件 快速激活",
+          "subtitle": "日常维护工具",
+          "content": "一键清空 OctaneRender 残留 + 部署资源的 Windows 工具。深色界面，自动获取用户名。"
+        },
+        {
+          "type": "highlight",
+          "content": "在 C4D 插件失效时，运行本工具 → 清空残留 → 重新部署 → 立即恢复。无需手动清理注册表或查找缓存目录。"
+        },
+        {
+          "type": "steps",
+          "title": "三步完成",
+          "items": [
+            {
+              "step": "①",
+              "icon": "📂",
+              "title": "选择目录",
+              "desc": "将程序放入包含 thirdparty/、OctaneRender/、octane/ 的目录，打开后选择 C4D 的 plugins 目录。"
+            },
+            {
+              "step": "②",
+              "icon": "🗑️",
+              "title": "清空残留",
+              "desc": "一键清空 Local、Roaming 中的 OctaneRender 缓存以及 octane 目录。"
+            },
+            {
+              "step": "③",
+              "icon": "📋",
+              "title": "复制资源",
+              "desc": "将 thirdparty、OctaneRender、octane 部署到目标 plugins 路径。运行 C4D 即可恢复。"
+            }
+          ]
+        },
+        {
+          "type": "specs",
+          "title": "技术规格",
+          "fields": [
+            { "label": "版本", "value": "最新" },
+            { "label": "平台", "value": "Windows" },
+            { "label": "技术栈", "value": "Python · PyInstaller" },
+            { "label": "许可", "value": "开源" }
+          ]
+        }
+      ],
+      "download_url": "https://github.com/Simiely/oc-plugin-activator/releases",
+      "github_url": "https://github.com/Simiely/oc-plugin-activator",
+      "screenshots": []
+    }
+  ]
+}
