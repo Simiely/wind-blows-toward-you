@@ -4,10 +4,13 @@
   "description": "世界的风吹向你 · 小程序 - 项目展示与资源分发",
   "scripts": {
     "dev": "uni -p mp-weixin",
-    "build": "uni build -p mp-weixin"
+    "build": "uni build -p mp-weixin",
+    "postinstall": "node scripts/fix-dcloudio-pkgs.js"
   },
   "dependencies": {
-    "vue": "^3.5.0"
+    "vue": "^3.5.0",
+    "@dcloudio/uni-app": "3.0.0-alpha-5010420260626001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-alpha-5010420260626001"
   },
   "devDependencies": {
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5010420260626001",
